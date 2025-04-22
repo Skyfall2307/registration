@@ -13,12 +13,12 @@
       <p>Please fill out the form below to register as a mentor or mentee. We’re excited to connect you with the right people and help you grow.</p>
     </header>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return validateForm()">
       <label for="first-name">First Name</label>
-      <input type="text" id="first-name" name="first_name" required />
+      <input type="text" id="first-name" name="first_name" pattern="[A-Za-z\s]+" required />
 
       <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" name="last_name" required />
+      <input type="text" id="last-name" name="last_name" pattern="[A-Za-z\s]+" required />
 
       <label for="company">Company Name</label>
       <input type="text" id="company" name="company_name" />
@@ -36,7 +36,7 @@
       <input type="email" id="email" name="email" required />
 
       <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" />
+      <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
 
       <label for="message">Message or Questions</label>
       <textarea id="message" name="message" rows="4"></textarea>
@@ -48,6 +48,19 @@
   <footer class="footer">
     &copy; 2025 Katarzyna Fonteyn. All rights reserved.
   </footer>
+
+  <script>
+    function validateForm() {
+      const checkboxes = document.querySelectorAll('input[name="interest"]');
+      const isChecked = Array.from(checkboxes).some(box => box.checked);
+      if (!isChecked) {
+        alert("Please select at least one: Mentor or Mentee.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
+
 
