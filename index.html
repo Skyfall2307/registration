@@ -26,18 +26,27 @@
       <label for="location">Location</label>
       <input type="text" id="location" name="location" />
 
-<div class="radio-group">
-  <p class="radio-label">I am interested in being a:</p>
-  <label><input type="radio" name="interest" value="Mentor" required /> Mentor</label>
-  <label><input type="radio" name="interest" value="Mentee" /> Mentee</label>
-  <label><input type="radio" name="interest" value="Either" /> I'm open to being either a Mentor or Mentee</label>
-</div>
-
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required />
 
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
+
+      <div class="radio-group">
+        <p class="radio-label">I am interested in being a:</p>
+        <label>
+          <input type="radio" name="interest" value="Mentor" required />
+          <span>Mentor</span>
+        </label>
+        <label>
+          <input type="radio" name="interest" value="Mentee" />
+          <span>Mentee</span>
+        </label>
+        <label>
+          <input type="radio" name="interest" value="Either" />
+          <span>I'm open to being either a Mentor or Mentee</span>
+        </label>
+      </div>
 
       <label for="message">Message or Questions</label>
       <textarea id="message" name="message" rows="4"></textarea>
@@ -52,10 +61,10 @@
 
   <script>
     function validateForm() {
-      const checkboxes = document.querySelectorAll('input[name="interest"]');
-      const isChecked = Array.from(checkboxes).some(box => box.checked);
+      const radios = document.querySelectorAll('input[name="interest"]');
+      const isChecked = Array.from(radios).some(r => r.checked);
       if (!isChecked) {
-        alert("Please select at least one: Mentor or Mentee.");
+        alert("Please select if you're interested in being a mentor, mentee, or both.");
         return false;
       }
       return true;
@@ -63,5 +72,3 @@
   </script>
 </body>
 </html>
-
-
