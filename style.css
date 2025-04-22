@@ -48,6 +48,29 @@ body {
   margin: 0 auto;
 }
 
+/* Learn More Button (top right) */
+.learn-more-button {
+  text-align: right;
+  margin-top: -1rem;
+  margin-bottom: 0.8rem;
+  padding-top: 0.2rem;
+}
+
+.learn-more-button a {
+  background: #6c63ff;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.learn-more-button a:hover {
+  background: #5146d7;
+}
+
 /* Countdown banner */
 .countdown {
   background: #fff3cd;
@@ -91,11 +114,13 @@ textarea:focus {
   background-color: #fff;
 }
 
+/* Taller textareas for open questions */
 #why,
 #expectations {
   height: 160px;
 }
 
+/* Allow textarea resize vertically only */
 textarea {
   resize: vertical;
 }
@@ -134,24 +159,4 @@ button:hover {
 .required-star {
   color: red;
   margin-left: 4px;
-}
-
-.learn-more-button {
-  text-align: right;
-  margin-bottom: 1.2rem;
-}
-
-.learn-more-button a {
-  background: #6c63ff;
-  color: white;
-  text-decoration: none;
-  font-size: 0.85rem;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-.learn-more-button a:hover {
-  background: #5146d7;
 }
