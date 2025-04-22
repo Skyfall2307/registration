@@ -13,6 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
+  font-size: 0.95rem;
 }
 
 .form-container {
@@ -23,23 +24,14 @@ body {
   width: 100%;
   max-width: 520px;
 }
-.countdown {
-  background: #fff3cd;
-  color: #856404;
-  border: 1px solid #ffeeba;
-  padding: 1rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  font-size: 1rem;
-  text-align: center;
-}
+
 .welcome {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .welcome h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #2c2c2c;
 }
@@ -50,10 +42,23 @@ body {
 }
 
 .welcome p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #666;
   max-width: 90%;
   margin: 0 auto;
+}
+
+/* Countdown banner */
+.countdown {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 form label {
@@ -68,11 +73,11 @@ select,
 textarea {
   width: 100%;
   max-width: 100%;
-  padding: 12px 14px;
+  padding: 10px 12px;
   margin-top: 6px;
   border: 1px solid #ddd;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.88rem;
   font-family: 'DM Sans', sans-serif;
   background-color: #fafafa;
   transition: border-color 0.2s ease;
@@ -86,14 +91,11 @@ textarea:focus {
   background-color: #fff;
 }
 
-/* Make long answer fields taller */
 #why,
 #expectations {
   height: 160px;
-  resize: vertical;
 }
 
-/* Allow user to resize vertically only */
 textarea {
   resize: vertical;
 }
@@ -102,10 +104,10 @@ textarea {
 button {
   margin-top: 1.8rem;
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background: #6c63ff;
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   border: none;
   border-radius: 12px;
@@ -128,7 +130,7 @@ button:hover {
   margin-top: 2rem;
 }
 
-/* Red asterisk */
+/* Red asterisk for required fields */
 .required-star {
   color: red;
   margin-left: 4px;
