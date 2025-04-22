@@ -1,3 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #eef3fc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 520px;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #2c2c2c;
+}
+
+.welcome h1 span {
+  color: #6c63ff;
+  font-weight: 600;
+}
+
+.welcome p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background-color: #fafafa;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+  background-color: #fff;
+}
+
 .checkbox-group {
   margin-top: 1rem;
 }
@@ -15,3 +90,16 @@
   margin-bottom: 0.3rem;
   color: #444;
 }
+
+button {
+  margin-top: 1.8rem;
+  width: 100%;
+  padding: 12px;
+  background: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease
