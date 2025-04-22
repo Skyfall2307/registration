@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Women in Procurement Mentoring Program</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .required-star {
-      color: red;
-      margin-left: 4px;
-    }
-  </style>
 </head>
 <body>
   <div class="form-container">
@@ -20,24 +14,24 @@
         This mentoring program is designed for <strong>Women in Procurement in Finland</strong> who are eager to grow, connect, and support one another. Participation is entirely <strong>voluntary</strong> and <strong>free of charge</strong>. The program will officially <strong>kick off in August</strong> with a virtual introduction session. Please fill out the form below to register as a mentor or mentee—we're excited to welcome you!
       </p>
     </header>
-<div class="countdown">
-  <strong>⏳ Registration closes in <span id="days-left">...</span> days. Don't miss your chance to join!</strong>
-</div>
-    <form action="https://formspree.io/f/xzzrbdna" method="POST">
+
+    <!-- Countdown -->
+    <div class="countdown">
+      ⏳ Registration closes in <span id="days-left">...</span> days — don't miss your chance to join!
+    </div>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <label for="first-name">First Name<span class="required-star">*</span></label>
       <input type="text" id="first-name" name="first_name" pattern="[A-Za-z\s]+" required />
 
       <label for="last-name">Last Name<span class="required-star">*</span></label>
       <input type="text" id="last-name" name="last_name" pattern="[A-Za-z\s]+" required />
-      
+
       <label for="job-title">Job Title<span class="required-star">*</span></label>
-      <input type="text" id="job-title" name="job_title" pattern="[A-Za-z\s]+required />
-      
+      <input type="text" id="job-title" name="job_title" required />
+
       <label for="company">Company Name<span class="required-star">*</span></label>
       <input type="text" id="company" name="company_name" required />
-
-      <label for="experience">How many years of procurement experience do you have? <span class="required-star">*</span></label>
-      <input type="number" id="experience" name="procurement_experience" min="0" required />
 
       <label for="location">Location<span class="required-star">*</span></label>
       <input type="text" id="location" name="location" required />
@@ -50,6 +44,9 @@
 
       <label for="phone">Phone Number (optional)</label>
       <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
+
+      <label for="experience">How many years of procurement experience do you have?<span class="required-star">*</span></label>
+      <input type="number" id="experience" name="procurement_experience" min="0" required />
 
       <label for="interest">I am interested in being a:<span class="required-star">*</span></label>
       <select id="interest" name="interest" required>
@@ -77,10 +74,10 @@
       </select>
 
       <label for="why">Why do you want to participate in the program?<span class="required-star">*</span></label>
-      <textarea id="why" name="why_participate" rows="4" required></textarea>
+      <textarea id="why" name="why_participate" required></textarea>
 
       <label for="expectations">What are your expectations for this program?<span class="required-star">*</span></label>
-      <textarea id="expectations" name="program_expectations" rows="3" required></textarea>
+      <textarea id="expectations" name="program_expectations" required></textarea>
 
       <label for="additional">Would you like to add something?</label>
       <textarea id="additional" name="additional_comments" rows="3"></textarea>
@@ -93,13 +90,13 @@
     &copy; 2025 Katarzyna Fonteyn. All rights reserved.
   </footer>
 
+  <!-- Countdown script -->
   <script>
-  const deadline = new Date("2025-06-30");
-  const today = new Date();
-  const oneDay = 1000 * 60 * 60 * 24;
-  const daysLeft = Math.ceil((deadline - today) / oneDay);
-
-  document.getElementById("days-left").textContent = daysLeft;
-</script>
+    const deadline = new Date("2025-06-30");
+    const today = new Date();
+    const oneDay = 1000 * 60 * 60 * 24;
+    const daysLeft = Math.ceil((deadline - today) / oneDay);
+    document.getElementById("days-left").textContent = daysLeft;
+  </script>
 </body>
 </html>
