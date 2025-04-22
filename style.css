@@ -1,64 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'DM Sans', sans-serif;
-  background: linear-gradient(135deg, #f9f9f9, #eef3fc);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
-}
-
-.form-container {
-  background: #ffffff;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
-  width: 100%;
-  max-width: 520px;
-}
-
-.welcome {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.welcome h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #2c2c2c;
-}
-
-.welcome h1 span {
-  color: #6c63ff;
-  font-weight: 600;
-}
-
-.welcome p {
-  font-size: 1rem;
-  color: #666;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-form label {
-  display: block;
+.checkbox-group {
   margin-top: 1rem;
+}
+
+.checkbox-label {
   font-weight: 500;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 12px 14px;
-  margin-top: 6px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  font-size: 1rem
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
