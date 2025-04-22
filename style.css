@@ -89,6 +89,12 @@ textarea:focus {
   gap: 8px;
   margin-bottom: 0.3rem;
   color: #444;
+  font-weight: 400;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+  accent-color: #6c63ff;
 }
 
 button {
@@ -102,4 +108,19 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #5146d7;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  padding: 2rem 1rem 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+}
