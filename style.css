@@ -23,7 +23,16 @@ body {
   width: 100%;
   max-width: 520px;
 }
-
+.countdown {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
 .welcome {
   text-align: center;
   margin-bottom: 2rem;
