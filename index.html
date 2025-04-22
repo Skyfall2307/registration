@@ -8,10 +8,35 @@
 </head>
 <body>
   <div class="form-container">
-    <h1>Register Here</h1>
-    <form action="https://formspree.io/f/xzzrbdna" method="POST">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required />
+    <header class="welcome">
+      <h1>Welcome to the <span>Women in Procurement Mentoring Program</span></h1>
+      <p>Please fill out the form below to register as a mentor or mentee. We’re excited to connect you with the right people and help you grow.</p>
+    </header>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first_name" required />
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last_name" required />
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company_name" />
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" />
+
+      <fieldset>
+        <legend>I am interested in being a:</legend>
+        <label>
+          <input type="checkbox" name="interest" value="Mentor" />
+          Mentor
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="Mentee" />
+          Mentee
+        </label>
+      </fieldset>
 
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required />
@@ -25,5 +50,8 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+<footer class="footer">
+  &copy; 2025 Katarzyna Fonteyn. All rights reserved.
+</footer>
 </body>
 </html>
