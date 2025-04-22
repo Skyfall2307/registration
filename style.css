@@ -73,30 +73,32 @@ textarea:focus {
   background-color: #fff;
 }
 
-.checkbox-group {
+/* Radio Button Section */
+.radio-group {
   margin-top: 1rem;
 }
 
-.checkbox-label {
+.radio-label {
   font-weight: 500;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.checkbox-group label {
+.radio-group label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   color: #444;
   font-weight: 400;
 }
 
-.checkbox-group input[type="checkbox"] {
-  margin: 0;
+.radio-group input[type="radio"] {
+  margin-right: 10px;
   accent-color: #6c63ff;
+  transform: scale(1.1);
 }
 
+/* Button */
 button {
   margin-top: 1.8rem;
   width: 100%;
@@ -115,6 +117,7 @@ button:hover {
   background: #5146d7;
 }
 
+/* Footer */
 .footer {
   width: 100%;
   text-align: center;
