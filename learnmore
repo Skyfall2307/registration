@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn More</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>About the Mentoring Program</h1>
+    <p>This mentoring program is created for Women in Procurement in Finland to foster connection, growth, and community support.</p>
+    <p>It is free of charge and based on willingness. You can join as a mentor, a mentee, or someone open to both roles.</p>
+    <p>The program kicks off in August 2025 with a virtual introduction meeting.</p>
+
+    <a href="index.html">← Back to Registration</a>
+  </div>
+</body>
+</html>
