@@ -135,3 +135,23 @@ button:hover {
   color: red;
   margin-left: 4px;
 }
+
+.learn-more-button {
+  text-align: right;
+  margin-bottom: 1.2rem;
+}
+
+.learn-more-button a {
+  background: #6c63ff;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.learn-more-button a:hover {
+  background: #5146d7;
+}
