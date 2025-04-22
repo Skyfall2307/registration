@@ -75,7 +75,7 @@ select:focus {
   background-color: #fff;
 }
 
-/* Radio Button Section */
+/* Radio Buttons */
 .radio-group {
   margin-top: 1.5rem;
 }
@@ -86,24 +86,24 @@ select:focus {
   color: #333;
 }
 
-.radio-group label {
+.radio-option {
   display: flex;
   align-items: center;
+  gap: 10px;
   margin-bottom: 0.6rem;
-  color: #444;
-  font-weight: 400;
 }
 
-.radio-group input[type="radio"] {
-  margin-right: 10px;
+.radio-option input[type="radio"] {
   accent-color: #6c63ff;
   transform: scale(1.1);
   flex-shrink: 0;
 }
 
-.radio-group span {
-  display: inline-block;
+.radio-option label {
+  font-weight: 400;
+  color: #444;
   line-height: 1.4;
+  cursor: pointer;
 }
 
 /* Button */
