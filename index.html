@@ -27,9 +27,15 @@
 
       <label for="last-name">Last Name<span class="required-star">*</span></label>
       <input type="text" id="last-name" name="last_name" pattern="[A-Za-z\s]+" required />
-
+      
+      <label for="job-title">Job Title<span class="required-star">*</span></label>
+      <input type="text" id="job-title" name="job_title" pattern="[A-Za-z\s]+required />
+      
       <label for="company">Company Name<span class="required-star">*</span></label>
       <input type="text" id="company" name="company_name" required />
+
+      <label for="experience">How many years of procurement experience do you have? <span class="required-star">*</span></label>
+      <input type="number" id="experience" name="procurement_experience" min="0" required />
 
       <label for="location">Location<span class="required-star">*</span></label>
       <input type="text" id="location" name="location" required />
