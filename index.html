@@ -5,35 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Women in Procurement Mentoring Program</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .required-star {
+      color: red;
+      margin-left: 4px;
+    }
+  </style>
 </head>
 <body>
   <div class="form-container">
     <header class="welcome">
-      <h1>Welcome to the <span>2025-2026 Women in Procurement Mentoring Program</span></h1>
-    <p>
-  This mentoring program is designed for <strong>Women in Procurement in Finland</strong> who are eager to grow, connect, and support one another. Participation is entirely <strong>voluntary</strong> and <strong>free of charge</strong>. The program will officially <strong>kick off in August 2025</strong> with a virtual introduction session. Please fill out the form below to register as a mentor or mentee—we're excited to welcome you!
-</p> </header>
+      <h1>Welcome to the <span>Women in Procurement Mentoring Program</span></h1>
+      <p>
+        This mentoring program is designed for <strong>Women in Procurement in Finland</strong> who are eager to grow, connect, and support one another. Participation is entirely <strong>voluntary</strong> and <strong>free of charge</strong>. The program will officially <strong>kick off in August</strong> with a virtual introduction session. Please fill out the form below to register as a mentor or mentee—we're excited to welcome you!
+      </p>
+    </header>
 
-    <form action="https://formspree.io/f/xzzrbdna" method="POST">
-      <label for="first-name">First Name</label>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="first-name">First Name<span class="required-star">*</span></label>
       <input type="text" id="first-name" name="first_name" pattern="[A-Za-z\s]+" required />
 
-      <label for="last-name">Last Name</label>
+      <label for="last-name">Last Name<span class="required-star">*</span></label>
       <input type="text" id="last-name" name="last_name" pattern="[A-Za-z\s]+" required />
 
-      <label for="company">Company Name</label>
-      <input type="text" id="company" name="company_name" />
+      <label for="company">Company Name<span class="required-star">*</span></label>
+      <input type="text" id="company" name="company_name" required />
 
-      <label for="location">Location</label>
-      <input type="text" id="location" name="location" />
+      <label for="location">Location<span class="required-star">*</span></label>
+      <input type="text" id="location" name="location" required />
 
-      <label for="email">Email Address</label>
+      <label for="email">Email Address<span class="required-star">*</span></label>
       <input type="email" id="email" name="email" required />
 
-      <label for="phone">Phone Number</label>
+      <label for="linkedin">LinkedIn Profile<span class="required-star">*</span></label>
+      <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/yourname" required />
+
+      <label for="phone">Phone Number (optional)</label>
       <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
 
-      <label for="interest">I am interested in being a:</label>
+      <label for="interest">I am interested in being a:<span class="required-star">*</span></label>
       <select id="interest" name="interest" required>
         <option value="" disabled selected>Select an option</option>
         <option value="Mentor">Mentor</option>
@@ -41,7 +51,7 @@
         <option value="Either">I'm open to being either</option>
       </select>
 
-      <label for="meeting_preference">I would rather meet:</label>
+      <label for="meeting_preference">I would rather meet:<span class="required-star">*</span></label>
       <select id="meeting_preference" name="meeting_preference" required>
         <option value="" disabled selected>Select an option</option>
         <option value="In person">In person</option>
@@ -49,7 +59,7 @@
         <option value="Both">I'm okay with both</option>
       </select>
 
-      <label for="time-commitment">How much time can you commit per month?</label>
+      <label for="time-commitment">How much time can you commit per month?<span class="required-star">*</span></label>
       <select id="time-commitment" name="monthly_minutes" required>
         <option value="" disabled selected>Select an option</option>
         <option value="30">30 minutes</option>
@@ -58,8 +68,11 @@
         <option value="120">120 minutes</option>
       </select>
 
-      <label for="why">Why do you want to participate in the program?</label>
+      <label for="why">Why do you want to participate in the program?<span class="required-star">*</span></label>
       <textarea id="why" name="why_participate" rows="4" required></textarea>
+
+      <label for="expectations">What are your expectations for this program?<span class="required-star">*</span></label>
+      <textarea id="expectations" name="program_expectations" rows="3" required></textarea>
 
       <label for="additional">Would you like to add something?</label>
       <textarea id="additional" name="additional_comments" rows="3"></textarea>
