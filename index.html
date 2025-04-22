@@ -32,6 +32,7 @@
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
 
+      <!-- Mentor / Mentee selection -->
       <div class="radio-group">
         <p class="radio-label">I am interested in being a:</p>
         <label>
@@ -48,6 +49,34 @@
         </label>
       </div>
 
+      <!-- Meeting preference -->
+      <div class="radio-group">
+        <p class="radio-label">I would rather meet:</p>
+        <label>
+          <input type="radio" name="meeting_preference" value="In person" required />
+          <span>In person</span>
+        </label>
+        <label>
+          <input type="radio" name="meeting_preference" value="Virtually" />
+          <span>Virtually</span>
+        </label>
+        <label>
+          <input type="radio" name="meeting_preference" value="Both" />
+          <span>I'm okay with both</span>
+        </label>
+      </div>
+
+      <!-- Time commitment -->
+      <label for="time-commitment">How much time can you commit per month?</label>
+      <select id="time-commitment" name="monthly_minutes" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="30">30 minutes</option>
+        <option value="60">60 minutes</option>
+        <option value="90">90 minutes</option>
+        <option value="120">120 minutes</option>
+      </select>
+
+      <!-- Message -->
       <label for="message">Message or Questions</label>
       <textarea id="message" name="message" rows="4"></textarea>
 
@@ -61,14 +90,25 @@
 
   <script>
     function validateForm() {
-      const radios = document.querySelectorAll('input[name="interest"]');
-      const isChecked = Array.from(radios).some(r => r.checked);
-      if (!isChecked) {
+      const interestRadios = document.querySelectorAll('input[name="interest"]');
+      const meetingRadios = document.querySelectorAll('input[name="meeting_preference"]');
+
+      const interestChecked = Array.from(interestRadios).some(r => r.checked);
+      const meetingChecked = Array.from(meetingRadios).some(r => r.checked);
+
+      if (!interestChecked) {
         alert("Please select if you're interested in being a mentor, mentee, or both.");
         return false;
       }
+
+      if (!meetingChecked) {
+        alert("Please select your meeting preference.");
+        return false;
+      }
+
       return true;
     }
   </script>
 </body>
 </html>
+
