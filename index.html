@@ -13,7 +13,7 @@
       <p>Please fill out the form below to register as a mentor or mentee. We’re excited to connect you with the right people and help you grow.</p>
     </header>
 
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return validateForm()">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <label for="first-name">First Name</label>
       <input type="text" id="first-name" name="first_name" pattern="[A-Za-z\s]+" required />
 
@@ -32,41 +32,22 @@
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
 
-      <!-- Mentor / Mentee -->
-      <div class="radio-group">
-        <p class="radio-label">I am interested in being a:</p>
-        <div class="radio-option">
-          <input type="radio" id="mentor" name="interest" value="Mentor" required />
-          <label for="mentor">Mentor</label>
-        </div>
-        <div class="radio-option">
-          <input type="radio" id="mentee" name="interest" value="Mentee" />
-          <label for="mentee">Mentee</label>
-        </div>
-        <div class="radio-option">
-          <input type="radio" id="either" name="interest" value="Either" />
-          <label for="either">I'm open to being either a Mentor or Mentee</label>
-        </div>
-      </div>
+      <label for="interest">I am interested in being a:</label>
+      <select id="interest" name="interest" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="Mentor">Mentor</option>
+        <option value="Mentee">Mentee</option>
+        <option value="Either">I'm open to being either</option>
+      </select>
 
-      <!-- Meeting preference -->
-      <div class="radio-group">
-        <p class="radio-label">I would rather meet:</p>
-        <div class="radio-option">
-          <input type="radio" id="in-person" name="meeting_preference" value="In person" required />
-          <label for="in-person">In person</label>
-        </div>
-        <div class="radio-option">
-          <input type="radio" id="virtually" name="meeting_preference" value="Virtually" />
-          <label for="virtually">Virtually</label>
-        </div>
-        <div class="radio-option">
-          <input type="radio" id="both" name="meeting_preference" value="Both" />
-          <label for="both">I'm okay with both</label>
-        </div>
-      </div>
+      <label for="meeting_preference">I would rather meet:</label>
+      <select id="meeting_preference" name="meeting_preference" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="In person">In person</option>
+        <option value="Virtually">Virtually</option>
+        <option value="Both">I'm okay with both</option>
+      </select>
 
-      <!-- Time commitment -->
       <label for="time-commitment">How much time can you commit per month?</label>
       <select id="time-commitment" name="monthly_minutes" required>
         <option value="" disabled selected>Select an option</option>
@@ -76,9 +57,11 @@
         <option value="120">120 minutes</option>
       </select>
 
-      <!-- Message -->
-      <label for="message">Message or Questions</label>
-      <textarea id="message" name="message" rows="4"></textarea>
+      <label for="why">Why do you want to participate in the program?</label>
+      <textarea id="why" name="why_participate" rows="4" required></textarea>
+
+      <label for="additional">Would you like to add something?</label>
+      <textarea id="additional" name="additional_comments" rows="3"></textarea>
 
       <button type="submit">Submit</button>
     </form>
@@ -87,27 +70,5 @@
   <footer class="footer">
     &copy; 2025 Katarzyna Fonteyn. All rights reserved.
   </footer>
-
-  <script>
-    function validateForm() {
-      const interestRadios = document.querySelectorAll('input[name="interest"]');
-      const meetingRadios = document.querySelectorAll('input[name="meeting_preference"]');
-
-      const interestChecked = Array.from(interestRadios).some(r => r.checked);
-      const meetingChecked = Array.from(meetingRadios).some(r => r.checked);
-
-      if (!interestChecked) {
-        alert("Please select if you're interested in being a mentor, mentee, or both.");
-        return false;
-      }
-
-      if (!meetingChecked) {
-        alert("Please select your meeting preference.");
-        return false;
-      }
-
-      return true;
-    }
-  </script>
 </body>
 </html>
