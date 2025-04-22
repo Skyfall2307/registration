@@ -55,58 +55,41 @@ form label {
 }
 
 input,
-textarea,
-select {
+select,
+textarea {
   width: 100%;
+  max-width: 100%;
   padding: 12px 14px;
   margin-top: 6px;
   border: 1px solid #ddd;
   border-radius: 12px;
   font-size: 1rem;
-  transition: border-color 0.2s ease;
+  font-family: 'DM Sans', sans-serif;
   background-color: #fafafa;
+  transition: border-color 0.2s ease;
 }
 
 input:focus,
-textarea:focus,
-select:focus {
+select:focus,
+textarea:focus {
   border-color: #6c63ff;
   outline: none;
   background-color: #fff;
 }
 
-/* Radio Buttons */
-.radio-group {
-  margin-top: 1.5rem;
+/* Make long answer fields taller */
+#why,
+#expectations {
+  height: 160px;
+  resize: vertical;
 }
 
-.radio-label {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #333;
+/* Allow user to resize vertically only */
+textarea {
+  resize: vertical;
 }
 
-.radio-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 0.6rem;
-}
-
-.radio-option input[type="radio"] {
-  accent-color: #6c63ff;
-  transform: scale(1.1);
-  flex-shrink: 0;
-}
-
-.radio-option label {
-  font-weight: 400;
-  color: #444;
-  line-height: 1.4;
-  cursor: pointer;
-}
-
-/* Button */
+/* Submit Button */
 button {
   margin-top: 1.8rem;
   width: 100%;
@@ -136,3 +119,8 @@ button:hover {
   margin-top: 2rem;
 }
 
+/* Red asterisk */
+.required-star {
+  color: red;
+  margin-left: 4px;
+}
