@@ -20,8 +20,10 @@
         This mentoring program is designed for <strong>Women in Procurement in Finland</strong> who are eager to grow, connect, and support one another. Participation is entirely <strong>voluntary</strong> and <strong>free of charge</strong>. The program will officially <strong>kick off in August</strong> with a virtual introduction session. Please fill out the form below to register as a mentor or mentee—we're excited to welcome you!
       </p>
     </header>
-
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<div class="countdown">
+  <strong>⏳ Registration closes in <span id="days-left">...</span> days. Don't miss your chance to join!</strong>
+</div>
+    <form action="https://formspree.io/f/xzzrbdna" method="POST">
       <label for="first-name">First Name<span class="required-star">*</span></label>
       <input type="text" id="first-name" name="first_name" pattern="[A-Za-z\s]+" required />
 
@@ -90,5 +92,14 @@
   <footer class="footer">
     &copy; 2025 Katarzyna Fonteyn. All rights reserved.
   </footer>
+
+  <script>
+  const deadline = new Date("2025-06-30");
+  const today = new Date();
+  const oneDay = 1000 * 60 * 60 * 24;
+  const daysLeft = Math.ceil((deadline - today) / oneDay);
+
+  document.getElementById("days-left").textContent = daysLeft;
+</script>
 </body>
 </html>
