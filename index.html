@@ -32,38 +32,38 @@
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" pattern="[0-9]+" title="Numbers only" />
 
-      <!-- Mentor / Mentee selection -->
+      <!-- Mentor / Mentee -->
       <div class="radio-group">
         <p class="radio-label">I am interested in being a:</p>
-        <label>
-          <input type="radio" name="interest" value="Mentor" required />
-          <span>Mentor</span>
-        </label>
-        <label>
-          <input type="radio" name="interest" value="Mentee" />
-          <span>Mentee</span>
-        </label>
-        <label>
-          <input type="radio" name="interest" value="Either" />
-          <span>I'm open to being either a Mentor or Mentee</span>
-        </label>
+        <div class="radio-option">
+          <input type="radio" id="mentor" name="interest" value="Mentor" required />
+          <label for="mentor">Mentor</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="mentee" name="interest" value="Mentee" />
+          <label for="mentee">Mentee</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="either" name="interest" value="Either" />
+          <label for="either">I'm open to being either a Mentor or Mentee</label>
+        </div>
       </div>
 
       <!-- Meeting preference -->
       <div class="radio-group">
         <p class="radio-label">I would rather meet:</p>
-        <label>
-          <input type="radio" name="meeting_preference" value="In person" required />
-          <span>In person</span>
-        </label>
-        <label>
-          <input type="radio" name="meeting_preference" value="Virtually" />
-          <span>Virtually</span>
-        </label>
-        <label>
-          <input type="radio" name="meeting_preference" value="Both" />
-          <span>I'm okay with both</span>
-        </label>
+        <div class="radio-option">
+          <input type="radio" id="in-person" name="meeting_preference" value="In person" required />
+          <label for="in-person">In person</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="virtually" name="meeting_preference" value="Virtually" />
+          <label for="virtually">Virtually</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="both" name="meeting_preference" value="Both" />
+          <label for="both">I'm okay with both</label>
+        </div>
       </div>
 
       <!-- Time commitment -->
@@ -111,4 +111,3 @@
   </script>
 </body>
 </html>
-
