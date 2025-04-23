@@ -159,23 +159,31 @@ button:hover {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   color: #444;
+  line-height: 1.5;
+}
+
+.gdpr-checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .gdpr-checkbox input[type="checkbox"] {
-  margin-right: 8px;
+  margin-top: 4px;
   transform: scale(1.1);
-  vertical-align: middle;
+  flex-shrink: 0;
 }
 
-.gdpr-checkbox label a {
+.gdpr-checkbox a {
   color: #6c63ff;
   text-decoration: none;
+  font-weight: 500;
 }
 
-.gdpr-checkbox label a:hover {
+.gdpr-checkbox a:hover {
   text-decoration: underline;
 }
-
 /* Red asterisk for required fields */
 .required-star {
   color: red;
