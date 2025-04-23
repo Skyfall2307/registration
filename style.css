@@ -159,20 +159,16 @@ button:hover {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   color: #444;
-  line-height: 1.5;
-}
-
-.gdpr-checkbox label {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  cursor: pointer;
 }
 
 .gdpr-checkbox input[type="checkbox"] {
-  margin-top: 4px;
+  margin-bottom: 0.5rem;
   transform: scale(1.1);
-  flex-shrink: 0;
+}
+
+.gdpr-checkbox label {
+  display: block;
+  line-height: 1.4;
 }
 
 .gdpr-checkbox a {
@@ -184,6 +180,7 @@ button:hover {
 .gdpr-checkbox a:hover {
   text-decoration: underline;
 }
+
 /* Red asterisk for required fields */
 .required-star {
   color: red;
